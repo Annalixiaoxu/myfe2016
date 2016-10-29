@@ -76,7 +76,9 @@
                 oContent.innerHTML = arr[this.index];
             }
         }
-
+        aLi[i].onselectstart = function (){
+            return false;
+        }
     </script>
 
 </body>
