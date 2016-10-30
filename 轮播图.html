@@ -14,16 +14,29 @@
         a{
             text-decoration: none;
         }
+
         #container img {
             height: 400px;
-            width: 400px;
+            width: 600px;
         }
         #container {
             height: 400px;
-            width: 400px;
-            margin:50px auto;
+            width: 600px;
+            margin: 50px auto;/*只有左右能够auto,上下居中做不到*/
+            position: relative;/*自己的位置已经很合适了，但为了让自己的子元素向自己看齐*/
+                               /*没给就相当于0,0 就是相对自己没动呢*/
+            /*解决塌陷问题 写死高度；overflow;定位*/
+        }
+        #tab{
+
 
         }
+
+        #tab li{
+
+
+        }
+
 
 
 
@@ -45,8 +58,8 @@
              <a href="#"><img src="img/4.jpg"></a>
             </div>
             <div id="arrows">
-                <span> &lt; </span>
-                <span> &gt; </span>
+                <span id="prev"> &lt; </span>
+                <span id="next"> &gt; </span>
             </div>
     </div>
 
