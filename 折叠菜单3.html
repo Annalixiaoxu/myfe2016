@@ -54,22 +54,30 @@
     var aH3 = oMenu.getElementsByTagName ("h3");
 
     for(var i=0;i<aH3.length; i++ ){
-
+        aH3[i].bShow = false;
         aH3[i].onclick = function(){
             var oSubMenu = next(this);
-            if(oSubMenu.style.display == "block"){
-                oSubMenu.style.display = "none";
-            }else{
-                oSubMenu.style.display = "block";
+
+            if(oSubMenu) {//先判断是否有效
+                if (this.bShow) {
+                    oSubMenu.style.display = "none";
+                } else {
+                    oSubMenu.style.display = "block";
+                }
+
+                this.bShow = !this.bShow;
             }
         };
     }
-//为了解决兼容性问题自己封装的一个函数
+
+//为了解决兼容性问题自己封装的一个函数，封装函数在别的代码里也可以使用
     function next(elem){
-        do{
-            elem = elem.nextSibling ;//用do...while 是为了先找一次再循环，万一一次就找到了呢
+        do{//用do...while 是为了先找一次再循环，万一一次就找到了呢
+            elem = elem.nextSibling ;
         }while (elem && elem.nodeType != 1);//element && 来判断这里的element是否有效，万一不存在element 就会死循环
+        //只有在js里，想要判断是否有效可以不用写判断语句，例如直接写element就可以判断出element是否有效
         //空字符串，0，null,undefined都相当于false
+        //元素结点的结点类型nodeType是1，文本结点的结点类型是3
         return elem;
     }
     aLi[i].onselectstart = function (){
