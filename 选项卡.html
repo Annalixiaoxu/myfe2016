@@ -51,9 +51,9 @@
 <div id="container">
     <ul id="menu">
 
-        <li onselectstart="return false;" class="selected">js</li>
-        <li onselectstart="return false;">html</li>
-        <li onselectstart="return false;">css</li>
+        <li class="selected">js</li>
+        <li>html</li>
+        <li>css</li>
     </ul>
         <div id="content">
            我爱jsjs
@@ -74,11 +74,11 @@
                 this.className = 'selected';
                 last = this.index;
                 oContent.innerHTML = arr[this.index];
-            }
+            };
         }
-//        aLi[i].onselectstart = function (){
-//            return false;
-//        }
+        aLi[i].onselectstart = function (){
+            return false;
+        }
     </script>
 
 </body>
