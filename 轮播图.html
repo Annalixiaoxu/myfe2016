@@ -14,7 +14,9 @@
         a{
             text-decoration: none;
         }
-
+        #img{
+            border: 0;
+        }
         #container img {
             height: 400px;
             width: 600px;
@@ -28,14 +30,26 @@
             /*解决塌陷问题 写死高度；overflow;定位*/
         }
         #tab{
-
-
+            position: absolute;
+            right: 20px;
+            bottom: 10px;
         }
 
         #tab li{
-
-
+            width: 20px;
+            height: 20px;
+            float: left;
+            background: #000000;
+            color: #ffffff;
+            margin-right: 5px;
+            text-align: center;
+            line-height: 20px;
+            cursor: pointer;
         }
+        #tab .selected{
+            background: orange;
+        }
+        
 
 
 
