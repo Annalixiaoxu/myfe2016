@@ -31,7 +31,7 @@
             overflow: hidden;
         }
         #tab{
-            position: absolute;
+            position: absolute;/*相对于最近的祖先元素*/
             right: 20px;
             bottom: 10px;
         }
@@ -102,18 +102,21 @@
         var oContainer = document.getElementById("container");
         var oTab = document.getElementById("tab");
         var aLi = oTab.getElementsByTagName("li");
+
         var oContent = document.getElementById("content");
         var aImg = oContent.getElementsByTagName("img");
+        //aLi和aImg 两个数组的索引对应
+
         var oPrev = document.getElementById ("prev");
         var oNext = document.getElementById ("next");
 
         var iNow = 0;
-        for(var i=0;i<aLi .length;i++){
+        for(var i=0;i<aLi .length;i++){//这个是页面一加载就执行的
             aLi[i].index = i;
             aLi[i].onmouseover = function (){
                 iNow = this.index;
                 changeImg(this.index);
-            };
+            };//与选项卡类似
 
         };
 
@@ -134,7 +137,7 @@
             }
             changeImg(iNow);
         };
-
+  
 
         function changeImg(idx){
             for (var i=0; i<aLi.length; i++){
@@ -150,7 +153,7 @@
         function run(){
             timer = setInterval(function (){
                 oNext.onclick() ;
-            },2000);
+            },3000);//函数，时间间隔 3000ms=3s
         }
         run() ;
 
