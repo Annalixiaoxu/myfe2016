@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>无缝轮播图</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul,ol{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        #content img{
+            height: 400px;
+            width: 800px;
+        }
+        #content {
+            width: 5000px;
+            height: 400px;
+        }
+        #container {
+            height: 400px;
+            width: 800px;
+            margin: 100px auto;
+            position: relative;
+        }
+        #tab{
+            position: absolute;
+        }
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <div id="content">
+        <img src="img/1.jpg" alt=""/>
+        <img src="img/2.jpg" alt=""/>
+        <img src="img/3.jpg" alt=""/>
+        <img src="img/4.jpg" alt=""/>
+    </div>
+    <ul id="tab">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <div id="arrow">
+        <span id="prev"> &lt; </span>
+        <span id="next"> &gt; </span>
+    </div>
+</div>
+
+
+
+</body>
+</html>
