@@ -110,7 +110,7 @@
         if(this == oPrev){
             iNow--;
             if(iNow == -1){
-                iNow = aImg.length - 2;
+                iNow = aImg.length - 2;/*即将要显示出的那一张*/
                 oContent.style.left = -(aImg.length - 1) * iImgWidth +  "px";
             }
             changeImg(iNow);
@@ -133,7 +133,7 @@
     run();
 
     oContainer.onmouseover = function(){
-        clearInterval(timer);
+        clearInterval(timer);/*保证始终只有一个定时器*/
     };
     oContainer.onmouseout = function(){
         run();
