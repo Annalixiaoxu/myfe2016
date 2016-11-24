@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>this is title</title>
+</head>
+<body>
+<!--第一题   随机生成两个小数给变量x.y，然后显示这两个数中的最大值。&ndash;&gt;-->
+<!--（提示：语句“var x=Math.random();”可为变量生成一个随机小数：另外，使用条件运算符‘'?:")-->
+<!--<script>-->
+<!--var x = Math.random ();-->
+<!--var y = Math.random ();-->
+<!--var max = x>y?x:y;-->
+
+<!--document.write("X=");document.write(x);-->
+<!--document.write("<BR>")-->
+<!--document.write("Y=");document.write(y);-->
+<!--document.write("<BR>")-->
+<!--document.write("最大值=");document.write(max);-->
+
+<!--</script>-->
+
+
+<!--第二题 如果某年的年份值是4的倍数并且不是100的倍数，或者该年份值是400的倍数，那么这一年就是闰年。-->
+<!--请编制一个页面，该页面显示当天是否处于闰年。-->
+<!--提示：使用以下语句，可使变量year的值就是当天所属的年份值。-->
+<!--var today = new Date();   //获取当天日期-->
+<!--var year = today.getFullYear();   //获取当天年份-->
+<!--<script>-->
+<!--var today = new Date();-->
+<!--var year = today.getFullYear();-->
+
+<!--var a = "是闰年";-->
+<!--var b = "不是闰年";-->
+
+<!--var c = ((year%4 == 0 && year%100 != 0) || year%400 == 0 );-->
+
+<!--document.write("本年");document.write(c?a:b);-->
+
+<!--</script>-->
+
+<!--第三题 编写程序．通过用户输入的年龄判断是哪个年龄段的人（儿童：年龄＜14；青少年：14<=年龄＜24；-->
+<!--青年：24<年龄＜40; 中年：40＜=年龄＜60; 老年：年龄>=60），并在页面上输出判断结果。-->
+<!--<script>-->
+<!--var msg = window.prompt("请输入您的年龄：");-->
+<!--if(msg<0){-->
+<!--document.write("输入错误");-->
+<!--}-->
+<!--else if(msg<14){-->
+<!--document.write("您是儿童");-->
+<!--}-->
+<!--else if(msg<24){-->
+<!--document.write("您是青少年");-->
+<!--}-->
+<!--else if(msg<40){-->
+<!--document.write("您是青年");-->
+<!--}-->
+<!--else if(msg<60){-->
+<!--document.write("您是中年");-->
+<!--}-->
+<!--else-->
+<!--document.write("您是老年");-->
+<!-- -->
+<!--</script>-->
+
+<!--第四题编写程序，艰据用户输入的一个数字(0~6)．-->
+<!--通过警示对话框显示对应的星期几(0: 星期日; 1: 星期一;……6: 星期六;)。-->
+<!--<script>-->
+<!--var weekday = window.prompt("请输入一个数字：","0~6");-->
+<!--var weekday = parseInt (weekday);-->
+<!--switch(weekday ){-->
+<!--case 0:alert("星期日");break;-->
+<!--case 1:alert("星期一");break;-->
+<!--case 2:alert("星期二");break;-->
+<!--case 3:alert("星期三");break;-->
+<!--case 4:alert("星期四");break;-->
+<!--case 5:alert("星期五");break;-->
+<!--case 6:alert("星期六");break;-->
+<!--default:alert("输入错误");break;-->
+<!--}-->
+<!--</script>-->
+
+<!--第五题.编写程序，计算10!(即 1*2*3＊·…10）的结果(10的阶乘)。-->
+<!--<script>-->
+<!--var i;-->
+<!--var a = 1;-->
+<!--for(i=1;i<=10;i++){-->
+<!--a *= i;-->
+<!--}-->
+<!--alert("10!=" + a);-->
+<!--</script>-->
+
+<!--第六题编写程序，计算 1!+2!+3!+…..＋10！的结果-->
+<!--<script>-->
+<!-- -->
+<!--</script>-->
+
+
+<!--<script>-->
+<!--//        递归-->
+<!--function fibonacci(n){-->
+<!--if(n == 1 || n == 2){-->
+<!--return 1;-->
+<!--}-->
+<!--return fibonacci(n-1) + fibonacci(n-2);-->
+<!--}-->
+<!--//       非递归-->
+<!--function fibonacci(n){-->
+<!--if(n == 1 || n == 2){-->
+<!--return 1;-->
+<!--}-->
+<!--var n1 = 1;n2 = 2,sum;-->
+<!--for(var i=3;i<n;i++ ){-->
+<!--sum = n1 + n2;-->
+<!--n1 = n2;-->
+<!--n2 = sum;-->
+<!--}-->
+<!--return sum;-->
+<!--}-->
+<!--document.write(fibonacci(7));-->
+<!--    </script>-->
+
+
+</body>
+</html>
