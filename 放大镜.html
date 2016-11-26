@@ -99,14 +99,13 @@
             var fScaleY = iTop / (oSmallBox.offsetHeight - oFloat.offsetHeight );
 
             oBigPic .style.left =  -fScaleX*(oBigPic.offsetWidth - oBigBox.offsetWidth ) + 'px';
-            oBigPic .style.top =  -fScaleX*(oBigPic.offsetHeight - oBigBox.offsetHeight ) + 'px';
+            oBigPic .style.top =  -fScaleY*(oBigPic.offsetHeight - oBigBox.offsetHeight ) + 'px';
             return false;
         };
         oSmallBox.onmouseout = function (){
             oFloat.style.display = "none";
             oBigBox.style.display = "none";
         };
-
 
 
     </script>
