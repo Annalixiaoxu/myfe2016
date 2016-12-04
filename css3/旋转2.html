@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            perspective: 1000px;
+        }
+        img{
+            border: 0;
+            width: 300px;
+            height: 300px;
+        }
+
+        #container{
+            width: 300px;
+            height: 300px;
+            margin: 150px auto;
+            transform-style: preserve-3d;
+            animation: rotate 3s linear infinite;
+        }
+
+        @keyframes rotate{
+            from{
+
+            }
+            to{
+                transform: rotateY(-360deg);
+            }
+        }
+        #tab{
+            width: 300px;
+            height: 300px;
+            margin: 150px auto;
+            transform-style: preserve-3d;
+            animation: rotate 3s linear infinite;
+        }
+        #content{
+            width: 300px;
+            height: 300px;
+            margin: 150px auto;
+            transform-style: preserve-3d;
+            animation: rotate 3s linear infinite;
+        }
+        img{
+            border: 0;
+            width: 300px;
+            height: 300px;
+        }
+
+        #content .cube{
+            background: #ffffff;
+            width: 300px;
+            height: 300px;
+            opacity: 0.6;
+            font-size: 60px;
+            text-align: center;
+            line-height: 200px;
+            border-radius: 10%;
+            border: 1px solid #ffffff;
+            position: absolute;
+        }
+        #content .cube .one{
+            transform: rotateY(180deg) translateZ(100px);
+        }
+        #content .cube .two{
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        #content .cube .three{
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+        #content .cube .four{
+            transform: rotateY(90deg) translateZ(100px);
+        }
+        #content .cube .five{
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+        #content .cube .six{
+            transform: translateZ(150px);
+        }
+        #tab .cube{
+            background: #ffffff;
+            width: 300px;
+            height: 300px;
+            opacity: 0.7;
+            text-align: center;
+            line-height: 200px;
+            border-radius: 10%;
+            /*border: 1px solid #ffffff;*/
+            position: absolute;
+        }
+        #tab .cube .one{
+            transform: rotateY(180deg) translateZ(150px);
+        }
+        #tab .cube .two{
+            transform: rotateX(90deg) translateZ(150px);
+        }
+        #tab .cube .three{
+            transform: rotateY(-90deg) translateZ(150px);
+        }
+        #tab .cube .four{
+            transform: rotateY(90deg) translateZ(150px);
+        }
+        #tab .cube .five{
+            transform: rotateX(-90deg) translateZ(150px);
+        }
+        #tab .cube .six{
+            transform: translateZ(150px);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="content">
+            <div class="cube one">1</div>
+            <div class="cube two">2</div>
+            <div class="cube three">3</div>
+            <div class="cube four">4</div>
+            <div class="cube five">5</div>
+            <div class="cube six">6</div>
+        </div>
+        <div id="tab">
+            <img class="cube one" src="../img/2.jpg" alt=""/>
+            <img class="cube two" src="../img/3.jpg" alt=""/>
+            <img class="cube three" src="../img/4.jpg" alt=""/>
+            <img class="cube four" src="../img/7.jpg" alt=""/>
+            <img class="cube five" src="../img/8.jpg" alt=""/>
+            <img class="cube six" src="../img/11.jpg" alt=""/>
+        </div>
+    </div>
+</body>
+</html>
