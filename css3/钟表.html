@@ -9,9 +9,10 @@
             margin: 0;
         }
         img{
-           width: 200px;
-           height: 200px;
-       }
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+        }
         #container {
             width: 200px;
             height: 200px;
@@ -19,9 +20,8 @@
             border-radius: 50%;
             margin: 100px auto;
             position: relative;
-            background-image: url(../img/3.jpg),url(../img/3.jpg);
-           /*background-image: url(../img/1.jpg),url(../img/1.jpg);*/
-            background-position: 0 0,100px 200px;
+            background-image: url(../img/11.jpg);
+            /*background-position: 0 0,100px 200px;*/
         }
         ul{
             list-style: none;
@@ -29,7 +29,7 @@
         #dial li{
             width: 2px;
             height: 6px;
-            background: #000000;
+            background: #000;
             position: absolute;
             left: 100px;
             transform-origin: 0 100px;
@@ -70,6 +70,9 @@
         <div id="hour" class="indicator"></div>
         <div id="minute" class="indicator"></div>
         <div id="second" class="indicator"></div>
+        <div id="img">
+            <img src="../img/11.jpg" alt=""/>
+        </div>
     </div>
 
     <script>
