@@ -34,6 +34,7 @@
             left: 100px;
             transform-origin: 0 100px;
         }
+        /*找规律，每个小针旋转6度*/
         #dial li:nth-child(5n+1){
             height: 10px;
         }
@@ -89,11 +90,11 @@
 
         var now, second, minute, hour;
         function run(){
-            now = new Date();
+            now = new Date();//now 是内置对象
             second = now.getSeconds();
             minute = now.getMinutes() + second / 60;
             hour = now.getHours () + minute / 60;
-            oHour.style.transform = "rotate("+ hour * 30 +"deg)";
+            oHour.style.transform = "rotate("+ hour * 30 +"deg)";//oHour是DOM对象
             oMinute.style.transform = "rotate("+ minute * 6 +"deg)";
             oSecond.style.transform = "rotate("+ second * 6 +"deg)";
         }
